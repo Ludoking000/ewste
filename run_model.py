@@ -1,3 +1,22 @@
+import subprocess
+import sys
+
+# Function to install packages
+def install(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+
+# List of required packages
+required_packages = ["ultralytics", "opencv-python", "tk"]
+
+# Try to import and install missing packages
+for pkg in required_packages:
+    try:
+        __import__(pkg if pkg != "opencv-python" else "cv2")
+    except ImportError:
+        print(f"[INFO] '{pkg}' not found. Installing...")
+        install(pkg)
+
+# Now import everything
 import os
 import cv2
 from ultralytics import YOLO
