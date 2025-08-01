@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>YOLOv8 E-Waste Detection</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.6;
+      color: #333;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    a {
+      color: #3498db;
+    }
+    code {
+      background: #f4f4f4;
+      padding: 2px 4px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    pre {
+      background: #f9f9f9;
+      padding: 10px;
+      overflow-x: auto;
+    }
+    .button {
+      display: inline-block;
+      background: #2ecc71;
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+      border-radius: 4px;
+      margin-top: 10px;
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🔍 YOLOv8 E-Waste Detection</h1>
+
+  <p>
+    This project is a YOLOv8 (You Only Look Once, version 8) object detection system designed to identify and classify e-waste items in images. 
+    It has been trained to detect a variety of electronic waste objects such as smartphones, cables, batteries, and other discarded electronic components. 
+    The model outputs bounding boxes with class labels and confidence scores, enabling efficient recycling and waste management.
+  </p>
+
+  <h2>📦 Downloads</h2>
+  <ul>
+    <li><a href="e_waste_model_20250731_125115.pt" download>Download YOLOv8 Model (.pt)</a></li>
+    <li><a href="run_model.py" download>Download Python Script</a></li>
+    <li><a href="data.yaml" download>Download Dataset Config (data.yaml)</a></li>
+  </ul>
+
+  <h2>🧪 Dataset</h2>
+  <p>
+    This model was trained on a custom e-waste dataset hosted on Roboflow Universe. You can view or download the dataset here:<br>
+    👉 <a href="https://universe.roboflow.com/electronic-waste-detection/e-waste-dataset-r0ojc/dataset/44" target="_blank">E-Waste Dataset on Roboflow</a>
+  </p>
+
+  <h2>⚙️ How to Run</h2>
+  <p>Install dependencies and run the script using Python:</p>
+  <pre><code>pip install ultralytics
+python run_model.py --source path/to/image_or_folder</code></pre>
+  <p>The script supports inference on single images or a folder. Output will include predictions with bounding boxes, labels, and confidence scores.</p>
+
+  <h2>🌐 Optional: Try it Online</h2>
+  <p>
+    You can also create a demo using Google Colab or Hugging Face Spaces (not included yet).<br>
+    <!-- Replace this link with your actual Colab if available -->
+    <a class="button" href="https://colab.research.google.com/" target="_blank">Open in Google Colab</a>
+  </p>
+
+  <footer>
+    &copy; 2025 Ludoking000 — <a href="https://github.com/Ludoking000/ewste" target="_blank">View on GitHub</a>
+  </footer>
+
+</body>
+</html>
